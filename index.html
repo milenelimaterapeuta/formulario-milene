@@ -7,41 +7,51 @@
   <meta name="description" content="Um primeiro passo para compreender o momento que você está vivendo e encontrar uma direção possível." />
   <style>
     :root{
-      --bg:#f7f1ea;
-      --card:#fffaf5;
-      --ink:#3f291f;
-      --muted:#6f625b;
-      --accent:#8a4f2d;
-      --accent2:#b67a56;
-      --line:#dfd2c6;
-      --shadow:0 18px 45px rgba(64,42,30,.10);
+      --wine:#4e1823;
+      --wine2:#6b2432;
+      --gold:#d4af37;
+      --gold2:#ead89a;
+      --cream:#fff8ee;
+      --cream2:#f6eadb;
+      --ink:#3a1e24;
+      --muted:#7d675f;
+      --line:#d8c7b2;
+      --shadow:0 18px 45px rgba(48,18,26,.18);
     }
     *{box-sizing:border-box}
     body{
       margin:0;
       font-family:Arial,Helvetica,sans-serif;
-      background:linear-gradient(180deg,#fbf7f2 0%,var(--bg) 100%);
-      color:var(--ink);
+      background:linear-gradient(180deg,var(--wine) 0%,#3f131c 100%);
+      color:var(--cream);
       line-height:1.55;
     }
-    .wrap{max-width:760px;margin:auto;padding:22px 18px 44px}
-    .brand{text-align:center;margin:8px 0 24px}
+    .wrap{max-width:760px;margin:auto;padding:28px 18px 48px}
+    .brand{text-align:center;margin:6px 0 24px}
     .brand .name{
       font-family:Georgia,"Times New Roman",serif;
       font-size:32px;
       margin:0;
+      color:var(--gold2);
     }
     .brand .role{
-      letter-spacing:.16em;
+      letter-spacing:.14em;
       font-size:12px;
       text-transform:uppercase;
-      color:var(--muted);
+      color:var(--cream2);
+      margin-top:4px;
+    }
+    .brand .faith{
+      font-size:13px;
+      color:var(--gold2);
+      margin-top:4px;
     }
     .hero{
-      background:var(--card);
-      border:1px solid var(--line);
+      background:linear-gradient(180deg,rgba(255,248,238,.98),rgba(246,234,219,.98));
+      color:var(--ink);
+      border:1px solid rgba(212,175,55,.45);
       border-radius:28px;
-      padding:30px 22px;
+      padding:32px 22px;
       box-shadow:var(--shadow);
       text-align:center;
     }
@@ -51,28 +61,29 @@
       line-height:1.08;
       margin:0;
     }
-    h1{font-size:clamp(38px,8vw,62px)}
+    h1{font-size:clamp(38px,8vw,62px);color:var(--wine)}
     .hero p{
       font-size:17px;
       color:var(--muted);
-      max-width:570px;
+      max-width:590px;
       margin:18px auto 0;
     }
     .note{
-      margin:22px auto 0;
+      margin:20px auto 0;
       max-width:570px;
       font-size:15px;
-      color:var(--muted);
+      color:#6d564f;
     }
     .form-card{
       margin-top:22px;
-      background:#fff;
-      border:1px solid var(--line);
+      background:var(--cream);
+      color:var(--ink);
+      border:1px solid rgba(212,175,55,.38);
       border-radius:26px;
-      padding:26px 20px;
+      padding:28px 20px;
       box-shadow:var(--shadow);
     }
-    .form-card h2{font-size:34px;text-align:center}
+    .form-card h2{font-size:34px;text-align:center;color:var(--wine)}
     .form-card .intro{
       text-align:center;
       color:var(--muted);
@@ -84,30 +95,35 @@
       font-weight:700;
       margin:16px 0 7px;
       font-size:15px;
+      color:var(--wine);
     }
     input,textarea{
       width:100%;
-      border:1px solid #d8cabf;
+      border:1px solid var(--line);
       border-radius:14px;
       padding:14px 14px;
       font:inherit;
-      background:#fffdfa;
+      background:#fffdf8;
       color:var(--ink);
       outline:none;
     }
-    input:focus,textarea:focus{border-color:var(--accent2);box-shadow:0 0 0 3px rgba(182,122,86,.12)}
+    input:focus,textarea:focus{
+      border-color:var(--gold);
+      box-shadow:0 0 0 3px rgba(212,175,55,.14)
+    }
     textarea{min-height:105px;resize:vertical}
     button{
       width:100%;
       margin-top:22px;
-      border:0;
+      border:1px solid var(--gold2);
       border-radius:999px;
       padding:16px 20px;
       font-weight:700;
       font-size:16px;
-      background:var(--accent);
-      color:white;
+      background:linear-gradient(90deg,#b88a24,var(--gold),#caa63c);
+      color:#2f1720;
       cursor:pointer;
+      box-shadow:0 8px 20px rgba(122,82,18,.2);
     }
     .small{
       font-size:12px;
@@ -117,28 +133,22 @@
     }
     .about{
       margin-top:22px;
-      background:rgba(255,250,245,.75);
-      border:1px solid var(--line);
+      background:rgba(255,248,238,.98);
+      color:var(--ink);
+      border:1px solid rgba(212,175,55,.38);
       border-radius:24px;
       padding:24px 20px;
       text-align:center;
+      box-shadow:var(--shadow);
     }
-    .about h2{font-size:30px}
+    .about h2{font-size:30px;color:var(--wine)}
+    .about .subtitle{margin:6px 0 0;color:#8a6a1e;font-weight:700}
     .about p{color:var(--muted);margin:10px auto 0;max-width:560px}
     footer{
       text-align:center;
       font-size:13px;
-      color:var(--muted);
+      color:var(--gold2);
       margin-top:28px;
-    }
-    .success{
-      display:none;
-      margin-top:18px;
-      padding:15px;
-      border-radius:14px;
-      background:#f2ebe4;
-      color:var(--ink);
-      text-align:center;
     }
   </style>
 </head>
@@ -146,13 +156,14 @@
   <main class="wrap">
     <header class="brand">
       <p class="name">Milene Lima</p>
-      <div class="role">Terapeuta Sistêmica Cristã</div>
+      <div class="role">Terapeuta para Mulheres</div>
+      <div class="faith">Cristã</div>
     </header>
 
     <section class="hero">
-      <h1>Você cuida de todo mundo.<br>Mas quem está cuidando de você?</h1>
-      <p>Talvez tenha chegado o momento de olhar para você com a mesma atenção que oferece a todos ao seu redor.</p>
-      <p class="note">Responda apenas quatro perguntas rápidas. Quero conhecer um pouco do momento que você está vivendo antes do nosso primeiro contato.</p>
+      <h1>O que você está vivendo hoje?</h1>
+      <p>Talvez você esteja passando por algo que tem mexido com suas emoções, seus relacionamentos ou com a forma como você tem se sentido consigo mesma.</p>
+      <p class="note">Responda apenas quatro perguntas rápidas para que eu possa conhecer um pouco do seu momento antes do nosso primeiro contato.</p>
     </section>
 
     <section class="form-card">
@@ -164,6 +175,7 @@
         <input type="hidden" name="_template" value="table">
         <input type="text" name="_honey" style="display:none">
         <input type="hidden" name="_captcha" value="true">
+
         <label for="nome">1. Qual é o seu nome?</label>
         <input id="nome" name="nome" autocomplete="name" required />
 
@@ -183,11 +195,11 @@
 
     <section class="about">
       <h2>Milene Lima</h2>
-      <p>Terapeuta Sistêmica Cristã. Ajudo mulheres a compreenderem padrões que atravessam seus relacionamentos, fortalecerem seu posicionamento e construírem uma nova forma de se relacionar consigo mesmas e com os outros.</p>
+      <div class="subtitle">Terapeuta para Mulheres</div>
+      <p>Ajudo mulheres a compreenderem suas questões emocionais, seus relacionamentos e os padrões que têm dificultado viver com mais clareza e segurança.</p>
     </section>
 
     <footer>Escolher você também é um ato de amor.</footer>
   </main>
-
-/body>
+</body>
 </html>
